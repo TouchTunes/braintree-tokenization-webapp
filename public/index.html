@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Braintree Tokenization</title>
+        <!-- Material Design Components Web -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-components-web/11.0.0/material-components-web.min.css">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+        <form id="tokenizeForm" action="#">
+            <div class="panel">
+                <header class="panel__header">
+                    <h1>Tokenize Credit Card</h1>
+                </header>
+                <div class="panel__content">
+                    <div class="textfield--float-label">
+                        <label class="tokenization-field--label" for="card-number"><span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg></span> Card Number 
+                        </label>
+                        <input type="text" id="card-number" name="card_number" class="tokenization-field" placeholder="">
+                    </div>
+                    <div class="textfield--float-label">
+                        <label class="tokenization-field--label" for="expiration-date">
+                            <span class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>
+                            </span> 
+                            Expiration Date
+                        </label>
+                        <input type="text" id="expiration-date" name="expiration_date" class="tokenization-field" placeholder="">
+                    </div>
+                    <div class="textfield--float-label">
+                        <label class="tokenization-field--label" for="cvv">
+                            <span class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                            </span>
+                            CVV
+                        </label>
+                        <input type="text" id="cvv" name="cvv" class="tokenization-field" placeholder="">
+                    </div>
+                    <div class="textfield--float-label">
+                        <label class="tokenization-field--label" for="postal-code">
+                            <span class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                            </span> 
+                            Postal Code
+                        </label>
+                        <input type="text" id="postal-code" name="postal_code" class="tokenization-field" placeholder="">
+                    </div>
+                </div>
+                <footer class="panel__footer">
+                    <button type="submit" class="tokenize-button">Tokenize</button>
+                </footer>
+            </div>
+        </form>
+
+        <h1 id="result"></h1>
+        <h1 id="deviceData"></h1>
+
+        <!-- Material Design Components Web -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/material-components-web/11.0.0/material-components-web.min.js"></script>
+        <!-- Load Braintree client-side SDK -->
+        <script src="https://js.braintreegateway.com/web/3.100.0/js/client.min.js"></script>
+        <script src="https://js.braintreegateway.com/web/3.100.0/js/data-collector.min.js"></script>
+        <!-- Bundle JavaScript file -->
+        <script src="dist/bundle.js"></script>
+    </body>
+</html>

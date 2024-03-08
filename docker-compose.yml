@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web-app-tokenize-credit-card:
+    image: docker-apps-dev.artifactory.tsp.cld.touchtunes.com/web-tool/tokenize-credit-card:latest
+    container_name: web-app-tokenize-credit-card
+    ports:
+      - "3000:3000"
+    environment:
+      - BRAINTREE_CLIENT_TOKEN=****
