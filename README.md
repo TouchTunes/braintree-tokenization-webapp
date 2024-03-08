@@ -59,6 +59,9 @@ Then, open your web browser and navigate to http://localhost:3000.
 ## Configuration
 
 You can configure the client token for Braintree SDK by setting the CLIENT_TOKEN environment variable or in the docker-compose file.
+Value for CLIENT_TOKEN can be found in the Braintree Gateway or the Braintree Sandbox for test environments.
+In Braintree, nagivat to:
+Settings (Gear Icon in the top right) -> API -> Tokenization Keys
 
 
 
