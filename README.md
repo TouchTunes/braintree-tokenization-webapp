@@ -6,6 +6,7 @@ This is a web application for tokenizing credit card information using Braintree
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Configuration](#configuration)
+- [Visualizer](#visualizer)
 
 ## Introduction
 
@@ -59,11 +60,13 @@ Then, open your web browser and navigate to http://localhost:3000.
 ## Configuration
 
 You can configure the client token for Braintree SDK by setting the CLIENT_TOKEN environment variable or in the docker-compose file.
+
 Value for CLIENT_TOKEN can be found in the Braintree Gateway or the Braintree Sandbox for test environments.
-In Braintree, nagivat to:
+
+In Braintree, nagivate to:
 Settings (Gear Icon in the top right) -> API -> Tokenization Keys
 
 
-
+## Visualizer
 ![tokenization_img](https://github.com/TouchTunes/braintree-tokenization-webapp/assets/124704325/986976bb-fb57-4cff-be96-a7f3394eadaf)
 
